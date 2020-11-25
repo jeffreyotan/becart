@@ -1,0 +1,19 @@
+<h2>Item Selected</h2>
+<form [formGroup]="form" (ngSubmit)="processForm()">
+    <div>
+        <input type="hidden" name="id" formControlName="id">
+    </div>
+    <div>
+        <label for="name">Item:</label>
+        <input type="text" name="name" id="name" formControlName="item">
+    </div>
+    <div>
+        <label for="quantity">Quantity Available:</label>
+        <input type="text" name="quantity" id="quantity" formControlName="quantity">
+    </div>
+    <div style="padding: 3px;">
+        <button type="submit" name="submit-btn" id="btn-del" value="delete">Delete</button>
+        <button type="submit" name="submit-btn" id="btn-add" value="add">Add</button>
+        <button type="submit" name="submit-btn" id="btn-upd" value="update" (click)="updateItem()">Update</button>
+    </div>
+</form>

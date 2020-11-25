@@ -1,0 +1,3 @@
+<div *ngFor="let item of itemList; let i = index">
+    <div style="border-width: 2px; border-style: solid; margin: 2px; padding: 2px;" (click)="onItemClick(i)">Item: {{item.item}}</div>
+</div>
